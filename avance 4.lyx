@@ -1,0 +1,315 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsubsection*
+Relación entre los sensores independientes de la fuente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u_{i}\left(r+\Delta r_{ij},t+\Delta t_{ij}\right)=u_{j}\left(r,t\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Transformada de Fourier del Kernel de Green
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\frac{r^{2}e^{\frac{ir\omega}{\beta}}\left(\delta_{i,j}-\gamma_{i}\gamma_{j}\right)}{\beta^{2}}+\frac{\left(\beta e^{\frac{ir\omega}{\alpha}}(\alpha-ir\omega)-\alpha e^{\frac{ir\omega}{\beta}}(\beta-ir\omega)\right)\theta\left(r\left(\frac{1}{\beta}-\frac{1}{\alpha}\right)\right)\left(\delta_{i,j}-3\gamma_{i}\gamma_{j}\right)}{\alpha\beta\omega^{2}}+\frac{r^{2}\gamma_{i}\gamma_{j}e^{\frac{ir\omega}{\alpha}}}{\alpha^{2}}}{4\sqrt{2}\pi^{3/2}\rho r^{3}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Simetría en el test
+\end_layout
+
+\begin_layout Standard
+Si seleccionamos 
+\begin_inset Formula $4$
+\end_inset
+
+ vértices 
+\begin_inset Formula $r_{1}=\left(-a,-a,0\right),r_{2}=\left(-a,a,0\right),r_{3}=\left(a,a,0\right),r_{4}=\left(a,-a,0\right)$
+\end_inset
+
+ y la fuente es un pulso unitario 
+\begin_inset Formula $F=\delta\left(t\right)\,\widehat{k}$
+\end_inset
+
+ se deben de cumplir las siguientes condiciones de simetría entre los coeficient
+es del Kernel de green que tienen subíndice 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Redefinir la discretización
+\end_layout
+
+\begin_layout Standard
+El Kernel de Green se compone de dos funciones delta de Dirac y una indicatriz
+ que deben ser discretizadas para que cumplan con las siguientes condiciones
+ deseadas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{-\infty}^{t}\left(t-\tau\right)1_{\left[\frac{r}{\alpha},\frac{r}{\beta}\right]}\left(t-\tau\right)d\tau=\begin{cases}
+0\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Revisión del Kernel de Green
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+G_{11} & = & c_{1}\,\left(\frac{3\, x^{2}}{r^{2}}-1\right)-c_{3}\, d\,\left(\frac{x^{2}}{r^{2}}-1\right)+c_{2}\, d\, x^{2}\\
+ & = & c_{2}\, d\, x\, y+\frac{3\, c_{1}\, x\, y}{r^{2}}-\frac{c_{3}\, d\, x\, y}{r^{2}}\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Test con condiciones ideales
+\end_layout
+
+\begin_layout Standard
+El test debe cumplir con un conjunto de condiciones que se deben de validar
+ en el proceso.
+\end_layout
+
+\begin_layout Enumerate
+Simetría: Para cualquier matriz que represente una superficie del módulo
+ del campo vectorial debe ser una matriz simétrica, eso quiere decir que
+ 
+\begin_inset Formula $A=A^{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La frecuencia de muestreo debe dar la capacidad de observar de la mejor
+ manera posible la onda 
+\begin_inset Formula $P$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ la que ya contiene de por si la onda cercana, eso quiere decir, que entre
+ la medición más cercana a los tiempos 
+\begin_inset Formula $\frac{r}{\alpha}$
+\end_inset
+
+ y 
+\begin_inset Formula $\frac{r}{\beta}$
+\end_inset
+
+ deben existir un conjunto no vacío de muestreos.
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{f_{\min}} & \leq & \frac{r}{\beta}-\frac{r}{\alpha}
+\end{eqnarray*}
+
+\end_inset
+
+para frecuencias de muestreo constantes 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{T-t_{0}}{n-1} & \leq & \frac{r}{\beta}-\frac{r}{\alpha}\\
+\frac{T-t_{0}}{\frac{r}{\beta}-\frac{r}{\alpha}}+1 & \leq & n\\
+n & = & 1+\left\lceil \frac{T-t_{0}}{\frac{r}{\beta}-\frac{r}{\alpha}}\right\rceil 
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Convergencia de los parámetros físicos
+\end_layout
+
+\begin_layout Standard
+Dado que los parámetros reales 
+\begin_inset Formula $\alpha_{k}$
+\end_inset
+
+ , 
+\begin_inset Formula $\beta_{k}$
+\end_inset
+
+ son consistentes, se omitieron de la optimización, esto quiere decir que
+ en la función set_est_param no considera la búsqueda del parámetro 
+\begin_inset Formula $\widehat{\alpha}$
+\end_inset
+
+ y 
+\begin_inset Formula $\widehat{\beta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Cambio de la definición discreta del Kernel de Green
+\end_layout
+
+\begin_layout Standard
+Hay que considerar el hecho de que el Kernel de Green está siendo evaluada
+ sobre un dominio discretizado y que para efectos de las pruebas se hace
+ mediante un dominio con muestreo variable que es requerido para efectos
+ de obtener una minimización significativa de la cantidad de mediciones
+ de la señal.
+\end_layout
+
+\begin_layout Standard
+Se deben de cumplir las siguiente condiciones
+\end_layout
+
+\begin_layout Standard
+Que cada una de las integrales sean precisas de forma independiente, eso
+ quiere decir que se calcula cada uno de los sumandos por separado de tal
+ manera que al hacer más preciso uno de los sumandos no se menos preciso
+ otro.
+\begin_inset Formula 
+\[
+\int_{-\infty}^{t}G\left(r-r_{0},t-\tau\right)u\left(\tau\right)d\tau\approx\sum_{\tau_{i}\in T}g^{*}\left(r-r_{0},t-\tau_{i}\right)u^{*}\left(\tau_{i}\right)\Delta\tau_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+s_{1}=\sum_{\tau_{i}\in T}g_{11}^{*}\left(r-r_{0},t-\tau_{i}\right)u_{x}^{*}\left(\tau_{i}\right)+g_{12}^{*}\left(r-r_{0},t-\tau_{i}\right)u_{y}^{*}\left(\tau_{i}\right)+g_{13}^{*}\left(r-r_{0},t-\tau_{i}\right)u_{z}^{*}\left(\tau_{i}\right)\Delta\tau_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+resultados
+\end_layout
+
+\begin_layout Standard
+Se obtuvieron los siguientes resultados y mejoras
+\end_layout
+
+\begin_layout Subsubsection*
+Preguntas
+\end_layout
+
+\begin_layout Enumerate
+¿No es mejor aplicar trasformada de Fourier a la convolución para luego
+ discretizar dado que la transformación elimina las discontinuidades?
+\end_layout
+
+\begin_layout Enumerate
+¿Si hacemos el TR con las transformadas de Fourier podemos hacer de mejor
+ manera la ponderación dado que debe existir una condición a optimizar sobre
+ los coeficientes de los armónicos?
+\end_layout
+
+\begin_layout Enumerate
+¿Podemos asumir que un sensor es fuente de otro sensor y hacer un todos
+ contra todos para encontrar los factores de corrección?
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,337 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Sobre la derivada
+\end_layout
+
+\begin_layout Subsection
+Derivada del producto
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{h\to0}\frac{f\left(x+h\right)g\left(x+h\right)-f\left(x\right)g\left(x\right)}{h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Regla de cadena
+\end_layout
+
+\begin_layout Standard
+La regla de la cadena se puede deducir desde la definición de derivada
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{h\to0}\frac{f\left(g\left(x+h\right)\right)-f\left(g\left(x\right)\right)}{h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+diferencial total
+\end_layout
+
+\begin_layout Standard
+sea 
+\begin_inset Formula $f:\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ demostrar la existencia de la diferencial total
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+df=\sum_{i}\frac{\partial f}{\partial x_{i}}dx_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+consideremos que 
+\begin_inset Formula $\Delta f\left(x,y\right)=f\left(x+\Delta x,y+\Delta y\right)-f\left(x,y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teorema de la divergencia
+\end_layout
+
+\begin_layout Standard
+El teorema de Gauss considera que el flujo de campo a través de una superficie
+ 
+\begin_inset Formula $\partial\Omega$
+\end_inset
+
+ está definido por
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{\Omega}\nabla\vec{F}dV=\int_{\partial\Omega}\vec{F}\vec{n}dS
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Integración por partes
+\end_layout
+
+\begin_layout Standard
+Se puede deducir la integral por partes desde la derivada del producto
+\end_layout
+
+\begin_layout Standard
+para la deducción en una variable de la integral por partes se puede deducir
+ de la siguiente manera
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+d\left(uv\right) & = & udv+vdu\\
+uv & = & \int udv+\int vdu
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+en varias variables, si consideramos que 
+\begin_inset Formula $u,v:\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+, si tomamos en consideración la probabilidad total
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+d\left(uv\right) & = & udv+vdu\\
+d\left(uv\right) & = & u\sum\frac{\partial v}{\partial x_{i}}dx_{i}+v\sum\frac{\partial u}{\partial x_{i}}dx_{i}\\
+ & = & u\nabla v+v\nabla u\\
+uv & = & \int udv+\int vdu
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+La ecuación de Euler Lagrange
+\end_layout
+
+\begin_layout Standard
+Comencemos con un ejemplo clásico de mecánica, con el problema de la Braquistóch
+ona
+\end_layout
+
+\begin_layout Subsection
+Solución de Euler
+\end_layout
+
+\begin_layout Standard
+Cualquier variación o desvío infinitesimal alrededor de un extremo, es proporcio
+nal a 
+\begin_inset Formula $\left(\Delta x\right)^{2}$
+\end_inset
+
+ por lo que se puede considerar nula.
+\end_layout
+
+\begin_layout Standard
+Si una curva que representa un trayecto entre dos puntos es una curva extrema
+ ( sea máxima o mínima), entonces cualquier segmento tendrá las mismas caracterí
+sticas, es decir, será extremo también.
+\end_layout
+
+\begin_layout Standard
+Busquemos minimizar la siguiente integral 
+\begin_inset Formula 
+\[
+I=\int_{\left[a,b\right]}F\left(y,y',x\right)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial F}{\partial y}-\frac{d}{dx}\left(\frac{\partial F}{\partial y'}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+problema de la braquistocrona debe minimizar el funcional
+\end_layout
+
+\begin_layout Subsection
+Solución de Lagrange
+\end_layout
+
+\begin_layout Standard
+Consideremos la versión analítica lograda por Lagrange a los 19 años
+\end_layout
+
+\begin_layout Section
+El problema de Poisson
+\end_layout
+
+\begin_layout Standard
+Consideremos la siguiente ecuación diferencial, llamada la ecuación de Poisson
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\nabla^{2}u=f
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+podemos considerar la formulación débil
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+-\int_{\Omega}\nabla^{2}uvdx & = & \int_{\Omega}fvdx\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Métodos numéricos para la resolución de sistemas de ecuaciones lineales
+\end_layout
+
+\begin_layout Section
+Espacios de Banach
+\end_layout
+
+\begin_layout Standard
+Un espacio de Banach es un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ dotado de una norma, de tal manera que cualquier sucesión de elementos
+ dentro de ese espacio converge a 
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Tensiones
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma=D\left(\varepsilon-\varepsilon_{0}\right)+\sigma_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
